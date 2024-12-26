@@ -22,7 +22,6 @@ hr{
     width: 25%;
 }
 
-
 header {
     height: 100vh; /* Altura igual à altura total da janela */
     /*background-image: url('img_header.jpg'); /* Substitua pelo caminho da sua imagem */
@@ -86,7 +85,7 @@ header::after {
     display: flex;
     width: 100%;
     max-width: auto;
-    justify-content: space-between; /* Espalha o conteúdo entre os lados */
+    justify-content: space-around ; /* Espalha o conteúdo entre os lados */
     align-items: center; /* Alinha verticalmente os itens */
     margin: 0 auto; 
     background-color: #dddbdb;
@@ -111,6 +110,34 @@ header::after {
 }
 
 .image-right {
+    max-width: 70%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;   
+}
+
+
+.content-left-atuamos {
+    flex: 1; /* Faz o conteúdo da esquerda ocupar o espaço disponível */
+    text-align: left; /* Alinha a imagem ao centro, se necessário */
+    color:#3b3939;
+    align-items: flex-start;
+    width: 30%;
+    top:0;
+    padding-left: 150px; 
+    padding-right: 0;   
+}
+
+
+.content-right-atuamos {
+    flex: 1; /* Faz a imagem ocupar o espaço disponível */
+    text-align: left; /* Alinha a imagem ao centro, se necessário */
+    padding-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.image-left {   
     max-width: 70%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5px;   
@@ -207,7 +234,7 @@ header::after {
 .sobre {
     color: #fff; /* Cor do texto */
     text-align: center;    
-    scroll-margin-top: 100px;
+    scroll-margin-top: 90px;
     /*padding: 0px 0; /* Espaçamento interno da seção */
 }
 
@@ -246,6 +273,10 @@ header::after {
     scroll-margin-top: 100px;
 }
 
+.contato{
+    width: 1200px;
+    padding-left: 300px;
+}
 .sobre h2, .servicos h2, .contato h2, .atuamos h2{
     font-size: 2em;
     margin-bottom: 20px;
@@ -254,13 +285,40 @@ header::after {
 
 .cards {
     display: flex;
+    flex-direction: column; /* Empilha as caixas na vertical */
+    gap: 5px; /* Espaço entre as caixas */
+    margin: 10px 0;
+}
+
+.card {
+    background-color: #ffffffdf; /* Fundo escuro */
+    color: #363232; /* Texto branco */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.card h3 {
+    color: #D4AF37; /* Títulos em amarelo */
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 
+.cards {
+    display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
-    background: #222;
+    background: #333333;
     padding: 20px;
     border-radius: 5px;
     width: 300px;
@@ -271,7 +329,7 @@ header::after {
 .card h3 {
     margin-bottom: 10px;
     color: #D4AF37;
-}
+} */
 
 .form-group {
     margin-bottom: 15px;
@@ -290,7 +348,7 @@ header::after {
     padding: 10px;
     border: 1px solid #555;
     border-radius: 5px;
-    background: #333;
+    background: #ffffff;
     color: #fff;
 }
 
