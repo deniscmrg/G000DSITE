@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px; /* Tamanho padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #3b3939;
+    background-color: #ffffff;
+}
+
+hr{
+    border: none;
+    border-top: 2px solid #D4AF37; /* Define a linha */
+    margin: 20px 0; /* Espaçamento vertical */
+    width: 25%;
+}
+
+
+header {
+    height: 100vh; /* Altura igual à altura total da janela */
+    /*background-image: url('img_header.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b3939;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    text-align: center;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(239, 238, 238, 0.5); /* Sombreamento para melhor legibilidade do texto */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px; /*1200*/
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container-missao, .container-atuamos {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-between; /* Espalha o conteúdo entre os lados */
+    align-items: center; /* Alinha verticalmente os itens */
+    margin: 0 auto; 
+    scroll-margin-top: 100px;
+}
+
+.container-sobre {
+    display: flex;
+    width: 100%;
+    max-width: auto;
+    justify-content: space-between; /* Espalha o conteúdo entre os lados */
+    align-items: center; /* Alinha verticalmente os itens */
+    margin: 0 auto; 
+    background-color: #dddbdb;
+}
+
+.content-left {
+    flex: 1; /* Faz o conteúdo da esquerda ocupar o espaço disponível */
+    text-align: left; /* Alinha a imagem ao centro, se necessário */
+    color:#3b3939;
+    align-items: flex-start;
+    top:0;
+    padding-left: 180px; 
+    padding-right: 0;   
+}
+
+.content-right {
+    flex: 1; /* Faz a imagem ocupar o espaço disponível */
+    text-align: right; /* Alinha a imagem ao centro, se necessário */
+    padding-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.image-right {
+    max-width: 70%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;   
+}
+
+.navbar {
+    background: #403c3ce0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.navbar .logo  {
+    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+.navbar .logoxp {
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+.logo-container {
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+/* Adicionando a linha vertical */
+.navbar .logo:first-child {
+    border-right: 2px solid #fff; /* Linha branca entre as imagens */
+    padding-right: 10px; /* Espaço para a linha não encostar na imagem */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    /*font-weight: bold;*/
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #D4AF37;
+}
+
+.hero {
+    /*background: #333;*/
+    color: #ffffff;
+    padding: 200px 0 200px; /* Adjusted padding for fixed navbar 100 50*/
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background:  #D4AF37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta:hover {
+    background: #fff;
+    color: #333;
+}
+
+.sobre {
+    color: #fff; /* Cor do texto */
+    text-align: center;    
+    scroll-margin-top: 100px;
+    /*padding: 0px 0; /* Espaçamento interno da seção */
+}
+
+
+.missao {
+    background-color: #ffffff; /* Cor de fundo da seção */
+    color: #fff; /* Cor do texto */
+    /*padding: 0px 0px 50px 50px; /* Espaçamento interno da seção */
+    text-align: center;
+    scroll-margin-top: 100px;
+    padding-bottom: 100PX;
+}
+
+.titulo-missao {
+    /*background-color: #D4AF37; /* Cor de fundo da seção */
+    color: #fff; /* Cor do texto */
+    /*padding: 100px 0px 50px 50px; /* Espaçamento interno da seção */
+    text-align: left;
+}
+
+.titulo-missao h2{
+    font-size: 2em;
+    margin-bottom: 0;
+    color: #080808;}
+
+.missao h2{
+    font-size: 2em;
+    padding-left: 150px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #D4AF37;}
+
+.contato, .atuamos {
+    /*padding: 100px 0;*/
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+
+.sobre h2, .servicos h2, .contato h2, .atuamos h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #D4AF37;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
+    color: #fff;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #D4AF37;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+.footer {
+    background: #222;
+    color:  #D4AF37;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.container-box {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 15px;
+    overflow-x: auto;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    background-color: #a59e9e00;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0 2px 5px #D4AF37;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.box h3 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #D4AF37;
+}
+.box p {
+    color: #3b3939;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+}
