@@ -33,19 +33,8 @@ header {
     justify-content: center;
     color: #3b3939;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    z-index: 2;
+    z-index: 10;
     text-align: center;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*background: rgba(239, 238, 238, 0.5); /* Sombreamento para melhor legibilidade do texto */
-    z-index: 1;
 }
 
 .header-content {
@@ -115,6 +104,7 @@ header::after {
     text-align: left; /* Alinha a imagem ao centro, se necessário */
     color:#3b3939;
     align-items: flex-start;
+    padding-left: 20px;
     top:0;
    
 }
@@ -124,6 +114,7 @@ header::after {
     text-align: right; /* Alinha a imagem ao centro, se necessário */
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 20px;
 }
 
 .content-right p{
@@ -269,6 +260,7 @@ header::after {
 .titulo-missao {
     color: #fff; /* Cor do texto */
     text-align: left;
+    padding-left: 20px;
 }
 
 .titulo-missao h2{
@@ -323,29 +315,6 @@ header::after {
     font-size: 14px;
     line-height: 1.5;
 }
-
-/* 
-.cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #333333;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
-    color: #fff;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    color: #D4AF37;
-} */
-
 
 .form-group {
     max-width: 1200px;
@@ -430,13 +399,110 @@ header::after {
 }
 
 
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container-missao, .container-atuamos, .container-sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-left, .content-right, .content-left-atuamos, .content-right-atuamos {
+        flex: unset;
+        max-width: 100%;
+        padding: 20px
+    }
+
+    .image-right, .image-left {
+        max-width: 50%;
+    }
+}
 
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
     .header-content h1 {
         font-size: 2rem;
     }
 
     .header-content p {
         font-size: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .container-box {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .box {
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .navbar .logo {
+        width: 80px;
+    }
+
+    .navbar .logoxp {
+        width: 50px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
     }
 }
