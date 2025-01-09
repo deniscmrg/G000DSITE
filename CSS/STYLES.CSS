@@ -86,10 +86,17 @@ header {
 
 
 .logo-contato {
-    max-width: 50%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
+    max-width: 40%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5px;   
 }
+
+.logo-contato-xp {
+    max-width: 20%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;   
+}
+
 
 .container-sobre {
     display: flex;
@@ -491,6 +498,22 @@ header {
         gap: 5px;
     }
 
+    .form-group {
+        max-width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+        padding: 0 10px; /* Adiciona espaçamento interno */
+    }
+
+    .form-group label {
+        width: 100%; /* Garante que o label se adapte ao tamanho do container */
+        text-align: left; /* Alinha o texto à esquerda (opcional) */
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%; /* Ocupa toda a largura do pai */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+
     
 }
 
@@ -511,25 +534,17 @@ header {
     .hero {
         padding: 80px 10px;
     }
-
-    form{
-        max-width: 1200px;
-    }
-
     .form-group {
-        max-width: 100%; /* Garante que os campos ocupem toda a largura disponível */
-        padding: 0 10px; /* Adiciona espaçamento interno */
+        padding: 0 5px; /* Menos padding em telas muito pequenas */
     }
 
     .form-group label {
-        width: 100%; /* Garante que o label se adapte ao tamanho do container */
-        text-align: left; /* Alinha o texto à esquerda (opcional) */
+        font-size: 14px; /* Ajusta o tamanho do texto do label */
     }
 
     .form-group input, .form-group textarea {
-        width: 100%; /* Ocupa toda a largura do pai */
-        font-size: 16px; /* Ajusta o tamanho da fonte */
-        padding: 10px; /* Ajusta o espaçamento interno */
+        font-size: 14px; /* Reduz a fonte para caber melhor */
+        padding: 8px; /* Menor espaçamento interno */
     }
 
     .box {
