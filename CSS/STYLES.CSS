@@ -160,13 +160,19 @@ header {
     border-radius: 5px;   
 }
 
+.logo-container {
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+}
+
 .navbar {
     background: #403c3ce0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000; 
-}
+}  
+  
 
 .navbar .logo  {
     width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
@@ -178,43 +184,82 @@ header {
     height: auto;
 }
 
-.logo-container {
-    display: flex;
-    gap: 10px; /* Espaço entre as imagens */
-}
-
 /* Adicionando a linha vertical */
 .navbar .logo:first-child {
     border-right: 2px solid #fff; /* Linha branca entre as imagens */
     padding-right: 10px; /* Espaço para a linha não encostar na imagem */
 }
 
-.navbar .container {
+.navbar-container-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+
+ .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-}
+} 
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-}
 
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
+#menuButton {
+    position: fixed;
+    top: 20px;
+    right: calc((100% - 1200px) / 2); /* Alinha o botão à direita dentro do limite de 1200px */
+    font-size: 36px;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    color: #fafaf8; /* Cor do ícone do botão */
+  }
+  
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: calc((100% - 1200px) / 2); /* Alinha o menu à direita dentro do limite de 1200px */
+    width: 250px;
+    height: 100%;
+    background-color: transparent; /* Fundo transparente */
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 100px;
+    position: relative;
+    top: -100%; /* Esconde os itens acima da tela */
+    transition: top 0.3s ease; /* Animação de deslize */
+    
+  }
+  
+  #sidebar ul li {
+    padding: 15px;
+    text-align: center;
+    background-color: #3b3939;
+  }
+  
+  #sidebar ul li a {
+    color: #ffffff; /* Cor do texto para fundo branco */
     text-decoration: none;
-    color: #fff;
-    /*font-weight: bold;*/
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #D4AF37;
-}
+    font-size: 18px;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #D4AF37; /* Cor do texto ao passar o mouse */
+  }
+  
+  /* Classe para mostrar os itens */
+  #sidebar.open ul {
+    top: 0; /* Traz os itens de volta para a posição original */
+  }
 
 .hero {
     /*background: #333;*/
@@ -262,7 +307,7 @@ header {
     /*padding: 0px 0px 50px 50px; /* Espaçamento interno da seção */
     text-align: center;
     scroll-margin-top: 100px;
-    padding-bottom: 100PX;
+    padding-bottom: 20PX;
 }
 
 .titulo-missao {
@@ -450,6 +495,20 @@ header {
 }
 
 @media (max-width: 768px) {
+    #menuButton {
+        right: 10px; /* Ajusta a posição do botão em telas menores */
+    }
+
+    #sidebar {
+        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+        right: -100%; /* Esconde o menu completamente */
+    }
+
+    #sidebar.open {
+        right: 0; /* Mostra o menu */
+    }
+    
+    
     body {
         font-size: 14px;
     }
@@ -580,3 +639,4 @@ header {
     }
 
 }
+

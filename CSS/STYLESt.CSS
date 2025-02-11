@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgba(43, 42, 42, 0.495); /* Fundo branco */
+}
+
+.container {
+  max-width: 1200px; /* Limite de largura do site */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  position: relative; /* Para posicionar o menu corretamente */
+}
+
+#menuButton {
+  position: fixed;
+  top: 20px;
+  right: calc((100% - 1200px) / 2); /* Alinha o botão à direita dentro do limite de 1200px */
+  font-size: 36px;
+  font-weight: bolder;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  color: #d9d673; /* Cor do ícone do botão */
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: calc((100% - 1200px) / 2); /* Alinha o menu à direita dentro do limite de 1200px */
+  width: 250px;
+  height: 100%;
+  background-color: transparent; /* Fundo transparente */
+  overflow: hidden;
+  z-index: 999;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 60px;
+  position: relative;
+  top: -100%; /* Esconde os itens acima da tela */
+  transition: top 0.3s ease; /* Animação de deslize */
+}
+
+#sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+#sidebar ul li a {
+  color: #333; /* Cor do texto para fundo branco */
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#sidebar ul li a:hover {
+  color: #f4eded; /* Cor do texto ao passar o mouse */
+}
+
+/* Classe para mostrar os itens */
+#sidebar.open ul {
+  top: 0; /* Traz os itens de volta para a posição original */
+}

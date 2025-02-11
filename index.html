@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/STYLES.CSS">
 </head>
 <body>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="container">
             <div class="logo-container">
                 <a href="#topo">
@@ -15,14 +15,28 @@
                     <img src="LOGO_XP.png" alt="XP" class="logoxp">
                 </a>
             </div>
-            <ul>
+            <button id="menuButton">☰</button>
+            <div id="sidebar">
+                <ul>
+                    <li><a href="#sobre">QUEM SOMOS</a></li>
+                    <li><a href="#missao">NOSSA MISSÃO</a></li>
+                    <li><a href="#atuamos">COMO ATUAMOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <script src="scripts.js"></script>
+
+
+            <!-- <ul>
                 <li><a href="#sobre">QUEM SOMOS</a></li>
                 <li><a href="#missao">NOSSA MISSÃO</a></li>
                 <li><a href="#atuamos">COMO ATUAMOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
-            </ul>
+            </ul> -->
         </div>
-    </nav>
+    </div>
     <section id = "topo">
         <header style="background-image: url('img_header.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" >
             <div class="hero">
@@ -141,6 +155,7 @@
                         <h1>Daniel Ferrari Melo</h1>
                         <p>Assessor de Investimentos</p>
                         <p>e-mail: daniel.ferrari@g000d.com.br</p>
+                        <p>telefone: (11) 98193-5664</p>
                         <br>
                         <a href="https://wa.me/5511981935664" target="_blank" rel="noopener noreferrer"><img src="whatsapp.png" alt="whatsapp" class = "logo"></a>
                         <a href="https://www.linkedin.com/in/daferrarimelo" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="linkedin" class = "logo"></a>
@@ -149,31 +164,7 @@
                     </div>
                     <div class="content-right-atuamos">
                       
-
-<!---                         
-                        <div class="logo-container">
-                            <img src="LOGOCONTATO.PNG" alt="G000D" class="logo-contato">
-                            <img src="logo_xp_black.png" alt="XP" class="logo-contato-xp">
-                        </div>    
-                    </div>
-              <div class="content-right-atuamos">
-                        <form>
-                            <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="mensagem">Mensagem</label>
-                                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn">Enviar</button>
-                        </form>
-                    </div>
---->                
+           
                 </div>
             </div>
         </section>
@@ -181,11 +172,23 @@
 
     <footer class="footer">
         <div class="container">
+            <p>A G000D Investimentos AI Ltda é uma empresa de agentes autônomos de investimento devidamente registrada na Comissão de Valores Mobiliários (CVM), na forma da Resolução CVM 16/2021. 
+                A G000D Investimentos AI Ltda atua no mercado financeiro credenciada à XP Investimentos CCTVM S/A, o que pode ser verificado através do site da CVM (www.cvm.gov.br > Informações de Regulados > Agentes Autônomos > Consulta a Informações de Agentes Autônomos > G000D) 
+                ou através do site da ANCORD para escritórios credenciados a partir de outubro de 2012 (http://www.ancord.org.br > Associados > Agentes Autônomos de Investimento) 
+                ou através do site da própria XP Investimentos CCTVM S/A (www.xpi.com.br > Sobre a XP > Encontre um escritório > Selecione o estado e a cidade que deseja pesquisar > Veja a lista dos Agentes Autônomos).
+                Na forma da legislação da CVM, o Agente Autônomo de Investimento não pode administrar ou gerir o patrimônio de investidores. 
+                O Agente Autônomo é um intermediário e dependeda autorização prévia do cliente para realizar operações no mercado financeiro. 
+                
+                O investimento em ações é um investimento de risco e rentabilidade passada não é garantia de rentabilidade futura. 
+                Na realização de operações com derivativos existe a possibilidade de perdas superiores aos valores investidos, podendo resultar em significativas perdas patrimoniais. 
+                
+                Para informações e dúvidas, favor contatar seu Agente Autônomo de Investimentos. Para reclamações, favor contatar a Ouvidoria da XP Investimentos no telefone nº 0800-722-3710.</p>
+            <br>
             <p>&copy; 2025 G000D INVESTIMENTOS. Todos os direitos reservados.</p>
-            <br>
-            <br>
-            <br>
+       
         </div>
     </footer>
+
+
 </body>
 </html>

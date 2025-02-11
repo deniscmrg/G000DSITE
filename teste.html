@@ -1,68 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPA Header</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {    
-            height: 100vh; /* Altura igual à altura total da janela */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .header-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .header-content p {
-            font-size: 1.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2rem;
-            }
-
-            .header-content p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Menu Sanduíche</title>
+    <link rel="stylesheet" href="css/stylest.css">
 </head>
 <body>
-    <header style="background-image: url('img_header.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="header-content">
-            <h1>Bem-vindo à Nossa Página</h1>
-            <p>Explore nosso conteúdo exclusivo</p>
+    <div class="container">
+        <button id="menuButton">☰</button>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Nossa Missão</a></li>
+                <li><a href="#">Como Atuamos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </div>
-       
-    </header>
-    
-    
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
