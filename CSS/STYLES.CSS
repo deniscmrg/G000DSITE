@@ -180,7 +180,7 @@ header {
 }
 
 .navbar .logoxp {
-    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
     height: auto;
 }
 
@@ -553,7 +553,7 @@ header {
     }
 
     .logo-container {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 5px;
     }
 
