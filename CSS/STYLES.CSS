@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Nunito', sans-serif;
     font-size: 16px; /* Tamanho padrão */
@@ -95,6 +96,17 @@ header {
     max-width: 20%; /* Garante que a imagem ocupe 100% do espaço disponível, respeitando o tamanho */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5px;   
+}
+
+.good{
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ddd;
+    font-size: 24px;
+    width: 100%;
 }
 
 
@@ -204,11 +216,11 @@ header {
     padding: 10px 20px;
 } 
 
-
 #menuButton {
     position: fixed;
     top: 20px;
-    right: calc((100% - 1200px) / 2); /* Alinha o botão à direita dentro do limite de 1200px */
+    /* right: 10px; */
+    right: calc((100% - 1200px) / 2);  /*Alinha o botão à direita dentro do limite de 1200px*/
     font-size: 36px;
     font-weight: bolder;
     background: none;
@@ -460,6 +472,13 @@ header {
 
 
 /* Responsividade */
+
+@media (max-width: 1190px) {
+    #menuButton {
+        right: 10px; /* Ajusta a posição do botão em telas menores */
+    }
+}
+
 @media (max-width: 1024px) {
     .container-missao, .container-atuamos, .container-sobre {
         flex-direction: column;
@@ -577,6 +596,10 @@ header {
 }
 
 @media (max-width: 480px) {
+    #menuButton {
+        right: 10px; /* Ajusta a posição do botão em telas menores */
+    }
+
     .header-content h1 {
         font-size: 1.8rem;
     }
